@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Chanson;
 use Illuminate\Support\Facades\Auth;
+use App\User;
+
 
 class MonControleur extends Controller
 {
@@ -32,5 +34,21 @@ class MonControleur extends Controller
         }
 
         return redirect("/");
+    }
+    
+    public function utilisateur($id) {
+        $utilisateur = User::find($id);
+        if($utilisateur == false) {
+            return abort(404);
+        } return view("utilisateur", ["utilisateur" => $utilisateur]);
+    }
+
+    public function suivre($id) {
+        $utilisateur = User::find($id);
+        if($utilisateur == false) {
+            return abort(404);
+        }
+        $utilisateur->ilsMeSuivent()->toggle(Auth::id());
+        return back();
     }
 }

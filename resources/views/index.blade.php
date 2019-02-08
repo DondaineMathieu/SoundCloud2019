@@ -2,9 +2,6 @@
 
 @section('content')
 
-@foreach ($chansons as $c)
-    <a href="#" class="chanson" data-file="{{$c->fichier}}">{{$c->nom}}</a><br />
-@endforeach
-    
+@include("_chansons")  
 
 @endsection
