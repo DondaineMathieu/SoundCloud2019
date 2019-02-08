@@ -39,6 +39,10 @@
 <audio id="audio" controls>
     <source src="" />
 </audio>
+<br />
+@auth
+<a href="/nouvelle">Insérer sur une nouvelle chanson</a>
+@endauth
 
 <div id="main">
     @yield('content')
