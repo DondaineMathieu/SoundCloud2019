@@ -35,10 +35,16 @@
         @endguest
     </ul>
 </nav>
+
+<audio id="audio" controls>
+    <source src="" />
+</audio>
+
 <div id="main">
     @yield('content')
 </div>
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
