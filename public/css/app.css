@@ -51,7 +51,7 @@ body {
   opacity: 0.85;
   vertical-align: middle;
   margin: 0 26px;
-  border: 3px solid #FE4365;
+  border: 3px solid #59b3aa;
   border-radius: 120px;
   width: 120px;
   height: 120px;
@@ -65,7 +65,7 @@ body {
   opacity: 0.85;
   vertical-align: middle;
   margin: 0 26px;
-  border: 3px solid #FE4365;
+  border: 3px solid #59b3aa;
   border-radius: 120px;
   width: 120px;
   height: 120px;
@@ -101,7 +101,7 @@ body {
 
 .player .song {
   font-family: Roboto, sans-serif;
-  color: #FE4365;
+  color: #59b3aa;
   position: absolute;
   top: 225px;
   left: 0;
@@ -137,7 +137,7 @@ body {
 .player .time {
   text-align: center;
   font-family: Roboto, sans-serif;
-  color: #FE4365;
+  color: #59b3aa;
   position: absolute;
   left: 50%;
   margin-left: -22px;
