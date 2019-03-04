@@ -10,6 +10,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -17,7 +18,7 @@
         {{ config('app.name', 'Laravel') }}
     </a>
 </header>
-
+{{ route('logout') }}
 <nav id="top-nav">
     <ul>
         <li id="categories"> <a href="javascript:test()" > Catégories <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 14"><path d="M7 7l7 7 7-7z"/></svg> </a> </li>
@@ -29,7 +30,7 @@
             <li><a href="{{ route('login') }}">Connexion</a></li>
             <li><a href="{{ route('register') }}">Inscription</a></li>
         @else
-            <li> Bonjour <a href="{{ route('logout') }}"> {{ Auth::user()->name }}</a></li>
+            <li> Bonjour <a href=""> {{ Auth::user()->name }}</a></li>
             <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     Deconnexion
                 </a></li>
@@ -50,7 +51,8 @@
         </ul>
     </nav>
 
-<audio>
+<audio id="audio" controls>
+
 </audio>
 
 <br />
@@ -63,7 +65,6 @@
 </div>
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
-<script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/nav.js') }}"></script>
 </body>
 </html>
