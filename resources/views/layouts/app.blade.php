@@ -16,18 +16,21 @@
         {{ config('app.name', 'Laravel') }}
     </a>
 </header>
-<!-- Authentication Links -->
+
 <nav>
     <ul>
+        <li id="categories"> <a href="javascript:test()" > Catégories <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 14"><path d="M7 7l7 7 7-7z"/></svg> </a> </li>
+        <li> <a href="" > Mes Musiques </a> </li>
+        <li> <a href="" > Explorer </a> </li>
+        <li id="separation"> | </li>
+
         @guest
-            <li><a href="{{ route('login') }}">Login</a></li>
-            <li><a href="{{ route('register') }}">Register</a></li>
+            <li><a href="{{ route('login') }}">Connexion</a></li>
+            <li><a href="{{ route('register') }}">Inscription</a></li>
         @else
-            <li> Bonjour {{ Auth::user()->name }}</li>
-            <li><a href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                    Logout
+            <li> Bonjour <a href="{{ route('logout') }}"> {{ Auth::user()->name }}</a></li>
+            <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Deconnexion
                 </a></li>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 {{ csrf_field() }}
