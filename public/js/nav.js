@@ -8,3 +8,9 @@ function test() {
     }
     
 }
+
+$(document).ready(function() {
+    $(".chanson").click(function(e) {
+        Player.load($(this).attr('data-file'));
+    });
+})

@@ -50,7 +50,10 @@
         </ul>
     </nav>
 
-<div class="player">
+
+
+    
+{{-- <div class="player">
     <canvas></canvas>
     <div class="song">
         <div class="artist">Kavinsky</div>
@@ -64,7 +67,7 @@
     </div>
     <div class="soundControl"></div>
     <div class="time">00:00</div>
-</div>
+</div> --}}
 
 <br />
 @auth
@@ -76,7 +79,8 @@
 </div>
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
+{{-- <script src="{{ asset('js/audio-player.js') }}"></script> --}}
 <script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/audio-player.js') }}"></script>
+<script src="{{ asset('js/nav.js') }}"></script>
 </body>
 </html>

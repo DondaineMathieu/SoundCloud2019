@@ -521,7 +521,7 @@ var Framer = {
                 {
                     artist: "Kavinsky",
                     song: "Odd Look ft. The Weeknd",
-                    url: "//katiebaca.com/tutorial/odd-look.mp3"
+                    url : "http://www.hochmuth.com/mp3/Haydn_Cello_Concerto_D-1.mp3"//url: "//katiebaca.com/tutorial/odd-look.mp3"
                 }
             ],
     
@@ -553,11 +553,24 @@ var Framer = {
                 Framer.setLoadingPercent(1);
                 Scene.init();
             },
-    
+            load : function(song2) {
+                console.log(song2)
+                this.tracks = [
+                    {
+                        artist: "todo",
+                        song: "pareil",
+                        url: song2
+                    }
+                ]
+                this.init()
+                this.loadTrack(0)
+                this.play()
+            },
             loadTrack: function (index) {
                 var that = this;
                 var request = new XMLHttpRequest();
                 var track = this.tracks[index];
+                console.log(track)
                 document.querySelector('.song .artist').textContent = track.artist;
                 document.querySelector('.song .name').textContent = track.song;
                 this.currentSongIndex = index;
