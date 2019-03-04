@@ -12,11 +12,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<header>
-    <a href="{{ url('/') }}">
-        {{ config('app.name', 'Laravel') }}
-    </a>
-</header>
 
 <nav id="top-nav">
     <ul>
@@ -50,7 +45,7 @@
 <nav id="nav-categories">
     <ul id="ul-categories">
         @foreach(App\Chanson::categories() as $c)
-            <li> <a> {{$c['style']}} - ({{$c['cnt']}})</a> </li>
+            <li> <a href="/categories/{{$c['style']}}"> {{$c['style']}} - ({{$c['cnt']}})</a> </li>
         @endforeach
         </ul>
     </nav>

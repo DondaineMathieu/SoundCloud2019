@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Chanson;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use Illuminate\Support\Facades\DB;
+
 
 
 class MonControleur extends Controller
@@ -21,8 +23,6 @@ class MonControleur extends Controller
     }
 
     public function creer(Request $request) {
-  
-
         if($request -> hasFile('chanson') && $request->file('chanson') -> isValid()){
             $c = new Chanson();
             $c->nom = $request -> input('nom');
@@ -51,5 +51,10 @@ class MonControleur extends Controller
         }
         $utilisateur->ilsMeSuivent()->toggle(Auth::id());
         return back();
+    }
+
+    public function categories($style){
+        $categories =Chanson::whereRaw("style=?", [$style])->get();
+        return view("index", ["chansons" => $categories]);
     }
 }
