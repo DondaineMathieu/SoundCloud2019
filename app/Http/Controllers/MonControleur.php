@@ -12,6 +12,7 @@ class MonControleur extends Controller
 {
     public function index() {
         $chansons = Chanson::all();
+        Chanson::categories();
         return view("index", ["chansons" => $chansons]);
     }
 
