@@ -9,6 +9,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -17,7 +18,7 @@
     </a>
 </header>
 
-<nav>
+<nav id="top-nav">
     <ul>
         <li id="categories"> <a href="javascript:test()" > Catégories <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 14"><path d="M7 7l7 7 7-7z"/></svg> </a> </li>
         <li> <a href="" > Mes Musiques </a> </li>
@@ -39,9 +40,32 @@
     </ul>
 </nav>
 
-<audio id="audio" controls>
-    <source src="" />
-</audio>
+<nav id="nav-categories">
+        <ul id="ul-categories">
+            <li><a href="">Electro</a></li>
+            <li><a href="">Rock</a></li>
+            <li><a href="">HipHop</a></li>
+            <li><a href="">Classique</a></li>
+            <li><a href="">Inclassable</a></li>
+        </ul>
+    </nav>
+
+<div class="player">
+    <canvas></canvas>
+    <div class="song">
+        <div class="artist">Kavinsky</div>
+        <div class="name">Odd Look ft. The Weeknd</div>
+    </div>
+    <div class="playarea">
+        <div class="prevSong"></div>
+        <div class="play"></div>
+        <div class="pause"></div>
+        <div class="nextSong"></div>
+    </div>
+    <div class="soundControl"></div>
+    <div class="time">00:00</div>
+</div>
+
 <br />
 @auth
 <a href="/nouvelle">Insérer sur une nouvelle chanson</a>
@@ -53,5 +77,6 @@
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/audio-player.js') }}"></script>
 </body>
 </html>
