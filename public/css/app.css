@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Nunito);* {
   margin: 0;
   padding: 0;
@@ -146,6 +147,9 @@ body {
 }
 
 body {
+=======
+@import url(https://fonts.googleapis.com/css?family=Nunito);body {
+>>>>>>> 5c868f795a063ad74ee6c6da18c08956bb53cf67
   background-image: url(/images/fond.png?72789becb71587c531d3d6a71bdf6cc0);
   height: 100vh;
   background-position: center;

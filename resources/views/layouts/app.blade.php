@@ -50,21 +50,8 @@
         </ul>
     </nav>
 
-<div class="player">
-    <canvas></canvas>
-    <div class="song">
-        <div class="artist">Kavinsky</div>
-        <div class="name">Odd Look ft. The Weeknd</div>
-    </div>
-    <div class="playarea">
-        <div class="prevSong"></div>
-        <div class="play"></div>
-        <div class="pause"></div>
-        <div class="nextSong"></div>
-    </div>
-    <div class="soundControl"></div>
-    <div class="time">00:00</div>
-</div>
+<audio>
+</audio>
 
 <br />
 @auth
@@ -77,6 +64,6 @@
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/audio-player.js') }}"></script>
+<script src="{{ asset('js/nav.js') }}"></script>
 </body>
 </html>
