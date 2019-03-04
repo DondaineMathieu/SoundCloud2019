@@ -36,9 +36,22 @@
     </ul>
 </nav>
 
-<audio id="audio" controls>
-    <source src="" />
-</audio>
+<div class="player">
+    <canvas></canvas>
+    <div class="song">
+        <div class="artist">Kavinsky</div>
+        <div class="name">Odd Look ft. The Weeknd</div>
+    </div>
+    <div class="playarea">
+        <div class="prevSong"></div>
+        <div class="play"></div>
+        <div class="pause"></div>
+        <div class="nextSong"></div>
+    </div>
+    <div class="soundControl"></div>
+    <div class="time">00:00</div>
+</div>
+
 <br />
 @auth
 <a href="/nouvelle">Insérer sur une nouvelle chanson</a>
@@ -50,5 +63,6 @@
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/audio-player.js') }}"></script>
 </body>
 </html>
