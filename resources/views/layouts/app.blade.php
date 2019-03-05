@@ -13,24 +13,25 @@
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 </head>
 <body>
-<header>
-    <a href="{{ url('/') }}">
-        {{ config('app.name', 'Laravel') }}
-    </a>
-</header>
-{{ route('logout') }}
 <nav id="top-nav">
     <ul>
-        <li id="categories"> <a href="javascript:test()" > Catégories <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 14"><path d="M7 7l7 7 7-7z"/></svg> </a> </li>
+        <li id="categories"> <a href="javascript:displayCategories()" > Catégories <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 14"><path d="M7 7l7 7 7-7z"/></svg> </a> </li>
         <li> <a href="" > Mes Musiques </a> </li>
-        <li> <a href="" > Explorer </a> </li>
+        <li id=> 
+            <div class="container">
+                <div class="search-box">
+                    <input type="text" />
+                    <span></span>
+                </div>
+            </div> 
+        </li>
         <li id="separation"> | </li>
 
         @guest
             <li><a href="{{ route('login') }}">Connexion</a></li>
             <li><a href="{{ route('register') }}">Inscription</a></li>
         @else
-            <li> Bonjour <a href=""> {{ Auth::user()->name }}</a></li>
+            <li> Bonjour <a href="/utilisateur/{{ Auth::user()->id }}"> <b> {{ Auth::user()->name }} </b></a></li>
             <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     Deconnexion
                 </a></li>
@@ -42,12 +43,10 @@
 </nav>
 
 <nav id="nav-categories">
-        <ul id="ul-categories">
-            <li><a href="">Electro</a></li>
-            <li><a href="">Rock</a></li>
-            <li><a href="">HipHop</a></li>
-            <li><a href="">Classique</a></li>
-            <li><a href="">Inclassable</a></li>
+    <ul id="ul-categories">
+        @foreach(App\Chanson::categories() as $c)
+            <li> <a href="/categories/{{$c['style']}}"> {{$c['style']}} - ({{$c['cnt']}})</a> </li>
+        @endforeach
         </ul>
     </nav>
 
