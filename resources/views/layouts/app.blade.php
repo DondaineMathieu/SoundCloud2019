@@ -21,7 +21,7 @@
         <li id=> 
             <div class="container">
                 <div class="search-box">
-                    <input type="text" />
+                    <input id="input-search" type="text" onkeypress="recherche()"/>
                     <span></span>
                 </div>
             </div> 
@@ -54,7 +54,13 @@
     </ul>
 </nav>
 
+<<<<<<< HEAD
 
+=======
+<audio id="audio" controls>
+        <source src="/test.m4a" type="audio/mp3"/>
+</audio>
+>>>>>>> 5b98a0fdcb58348503bdfa115071578a1176387d
 
 <br />
 @auth
@@ -87,5 +93,6 @@
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/nav.js') }}"></script>
+<script src="{{ asset('js/search.js') }}"></script>
 </body>
 </html>

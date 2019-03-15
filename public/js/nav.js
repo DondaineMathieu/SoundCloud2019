@@ -8,11 +8,6 @@ function displayCategories() {
     }
 }
 
-function displaySearch() {
-    
-}
-
-
 $(document).ready(function() {
     $(".chanson").click(function(e) {
         var f= $(this).attr('data-file');
