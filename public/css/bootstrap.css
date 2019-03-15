@@ -63,6 +63,11 @@ body {
   background-color: #fff;
 }
 
+main {
+  display: flex !important;
+  flex-direction: row;
+}
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
@@ -4582,6 +4587,7 @@ input[type="button"].btn-block {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1.25rem;
+  color : white;
 }
 
 .card-title {

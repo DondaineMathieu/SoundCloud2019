@@ -54,9 +54,7 @@
     </ul>
 </nav>
 
-<audio id="audio" controls>
-        <source src="/test.m4a" type="audio/mp3"/>
-</audio>
+
 
 <br />
 @auth
@@ -67,12 +65,19 @@
     @yield('content')
 </div>
 
-<div class="footer_player">
-    <div class="info_musique"> 
+<div class="footer-player">
+    <div class="info-musique"> 
+        <div></div>
+        <div>
+            <h2>Titre de la chanson</h2>
+            <p>auteur de la musique</p>
+        </div>
     </div>
 
     <div class="player">
-        <audio id="audio" controls></audio>
+        <audio id="audio" controls>
+            <source src="/test.m4a" type="audio/mp3"/>
+        </audio>
     </div>
 
 </div>

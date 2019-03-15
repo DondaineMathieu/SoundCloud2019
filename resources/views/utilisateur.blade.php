@@ -2,11 +2,17 @@
 
 @section('content')
 
-<h3>Utilisateur : {{$utilisateur ->name}}</h3>
+<div class="card text-center" style="width : 18rem;">
+    <img class="card-img-top" src="/images/logo_jaxsong.png" alt="image profil">
 
-<h4>Il suit : {{$utilisateur->jeLesSuit->count()}} personne</h4>
-<h4>Il me suivent : {{$utilisateur->ilsMeSuivent->count()}} personne</h4>
-
+    <div class="card-body">
+        <h5 class="card-title">{{$utilisateur ->name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">You Follow : {{$utilisateur->jeLesSuit->count()}}</li>
+        <li class="list-group-item">Followers : {{$utilisateur->ilsMeSuivent->count()}}</li>
+    </ul>
+</div>
 @auth
     @if(Auth::id() != $utilisateur->id)
         @if($utilisateur->ilsMeSuivent->contains(Auth::id()))
@@ -20,6 +26,8 @@
     @endif
 @endauth
 <br />
+
+
 
  @include('_chansons', ['chansons' => $utilisateur->chansons])
 
