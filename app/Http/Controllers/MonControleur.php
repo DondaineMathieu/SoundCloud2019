@@ -65,6 +65,7 @@ class MonControleur extends Controller
 
     public function recherche($s) {
         $utilisateur = User::whereRaw("name LIKE CONCAT('%', ?,'%')", [$s])->get();
-        return view("recherche", ["utilisateur"=>$utilisateur]);
+        $chansons = Chanson::whereRaw("nom LIKE CONCAT('%', ?,'%')", [$s])->get();
+        return view("recherche", ["utilisateur"=>$utilisateur, "chansons"=>$chansons]);
     }
 }
