@@ -47,8 +47,8 @@
         @foreach(App\Chanson::categories() as $c)
             <li> <a href="/categories/{{$c['style']}}"> {{$c['style']}} - ({{$c['cnt']}})</a> </li>
         @endforeach
-        </ul>
-    </nav>
+    </ul>
+</nav>
 
 <audio>
 </audio>
