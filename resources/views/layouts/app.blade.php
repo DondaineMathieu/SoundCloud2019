@@ -10,9 +10,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
 </head>
 <body>
-
 <nav id="top-nav">
     <ul>
         <li id="categories"> <a href="javascript:displayCategories()" > Catégories <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 14"><path d="M7 7l7 7 7-7z"/></svg> </a> </li>
@@ -50,7 +50,8 @@
     </ul>
 </nav>
 
-<audio>
+<audio id="audio" controls>
+
 </audio>
 
 <br />
@@ -63,7 +64,6 @@
 </div>
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
-<script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/nav.js') }}"></script>
 </body>
 </html>

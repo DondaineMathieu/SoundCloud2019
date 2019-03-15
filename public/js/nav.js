@@ -15,6 +15,9 @@ function displaySearch() {
 
 /* $(document).ready(function() {
     $(".chanson").click(function(e) {
-        Player.load($(this).attr('data-file'));
+        var f= $(this).attr('data-file');
+        var audio = $("#audio");
+        audio[0].src = f;
+        audio[0].play();
     });
 }) */
