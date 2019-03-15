@@ -14,6 +14,7 @@
 </head>
 <body>
 <nav id="top-nav">
+<div class="logo"><img src="/images/logo_jaxsong.png"></div>
     <ul>
         <li id="categories"> <a href="javascript:displayCategories()" > Catégories <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 14"><path d="M7 7l7 7 7-7z"/></svg> </a> </li>
         <li> <a href="" > Mes Musiques </a> </li>
@@ -53,9 +54,13 @@
     </ul>
 </nav>
 
+<<<<<<< HEAD
+
+=======
 <audio id="audio" controls>
         <source src="/test.m4a" type="audio/mp3"/>
 </audio>
+>>>>>>> 5b98a0fdcb58348503bdfa115071578a1176387d
 
 <br />
 @auth
@@ -65,6 +70,26 @@
 <div id="main">
     @yield('content')
 </div>
+
+<div class="footer-player">
+    <div class="info-musique"> 
+        <div></div>
+        <div>
+            <h2>Titre de la chanson</h2>
+            <p>auteur de la musique</p>
+        </div>
+    </div>
+
+    <div class="player">
+        <audio id="audio" controls>
+            <source src="/test.m4a" type="audio/mp3"/>
+        </audio>
+    </div>
+
+</div>
+
+    
+    
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/nav.js') }}"></script>
