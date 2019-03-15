@@ -45,7 +45,7 @@
 <nav id="nav-categories">
     <ul id="ul-categories">
             <p style="display:none;">{{$i=0}}</p>
-        @foreach(App\Chanson::categories() as $c)
+        @foreach(App\Chanson::bestCategories() as $c)
             <li> <a href="/categories/{{$c['style']}}"> {{$c['style']}} - ({{$c['cnt']}})</a> </li>
             <p style="display:none;">{{$i=$i+$c['cnt']}}</p>
         @endforeach
@@ -54,7 +54,7 @@
 </nav>
 
 <audio id="audio" controls>
-
+        <source src="/test.m4a"" type="audio/mp3"/>
 </audio>
 
 <br />
