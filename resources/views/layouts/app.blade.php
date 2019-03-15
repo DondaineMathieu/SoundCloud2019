@@ -16,16 +16,23 @@
 <nav id="top-nav">
 <div class="logo"><img src="/images/logo_jaxsong.png"</div>
     <ul>
-        <li id="categories"> <a href="javascript:test()" > Catégories <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 14"><path d="M7 7l7 7 7-7z"/></svg> </a> </li>
+        <li id="categories"> <a href="javascript:displayCategories()" > Catégories <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 14"><path d="M7 7l7 7 7-7z"/></svg> </a> </li>
         <li> <a href="" > Mes Musiques </a> </li>
-        <li> <a href="" > Explorer </a> </li>
+        <li id=> 
+            <div class="container">
+                <div class="search-box">
+                    <input type="text" />
+                    <span></span>
+                </div>
+            </div> 
+        </li>
         <li id="separation"> | </li>
 
         @guest
             <li><a href="{{ route('login') }}">Connexion</a></li>
             <li><a href="{{ route('register') }}">Inscription</a></li>
         @else
-            <li> Bonjour <a href=""> {{ Auth::user()->name }}</a></li>
+            <li> Bonjour <a href="/utilisateur/{{ Auth::user()->id }}"> <b> {{ Auth::user()->name }} </b></a></li>
             <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     Deconnexion
                 </a></li>
@@ -37,14 +44,15 @@
 </nav>
 
 <nav id="nav-categories">
-        <ul id="ul-categories">
-            <li><a href="">Electro</a></li>
-            <li><a href="">Rock</a></li>
-            <li><a href="">HipHop</a></li>
-            <li><a href="">Classique</a></li>
-            <li><a href="">Inclassable</a></li>
-        </ul>
-    </nav>
+    <ul id="ul-categories">
+        {{$i=0}}
+        @foreach(App\Chanson::categories() as $c)
+            <li> <a href="/categories/{{$c['style']}}"> {{$c['style']}} - ({{$c['cnt']}})</a> </li>
+            {{$i=$i+$c['cnt']}}
+        @endforeach
+    <li><a href="/categories">Voir toutes les categories ({{$i}})<a>
+    </ul>
+</nav>
 
 <audio id="audio" controls>
 
