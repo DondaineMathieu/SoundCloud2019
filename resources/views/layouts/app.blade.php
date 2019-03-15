@@ -54,9 +54,6 @@
     </ul>
 </nav>
 
-<audio id="audio" controls>
-
-</audio>
 
 <br />
 @auth
@@ -66,6 +63,19 @@
 <div id="main">
     @yield('content')
 </div>
+
+<div class="footer_player">
+    <div class="info_musique"> 
+    </div>
+
+    <div class="player">
+        <audio id="audio" controls></audio>
+    </div>
+
+</div>
+
+    
+    
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/nav.js') }}"></script>
