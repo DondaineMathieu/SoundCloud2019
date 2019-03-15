@@ -1,4 +1,4 @@
-body {
+@import url(https://fonts.googleapis.com/css?family=Nunito);body {
   background-image: url(/images/fond.png?72789becb71587c531d3d6a71bdf6cc0);
   height: 100vh;
   background-position: center;
@@ -22,11 +22,14 @@ nav#top-nav ul {
   display: flex;
   list-style-type: none;
   justify-content: flex-end;
+  margin-bottom: 0;
 }
 
 nav#top-nav ul li {
   flex-direction: row;
   margin: 8px;
+  margin-bottom: 0;
+  height: auto;
 }
 
 nav#top-nav ul li svg {
@@ -81,7 +84,7 @@ nav#top-nav ul li:last-child {
 }
 
 .search-box {
-  padding-bottom: 15px;
+  padding-bottom: 0.8rem;
 }
 
 .search-box input[type=text] {
@@ -110,7 +113,7 @@ nav#top-nav ul li:last-child {
 
 .search-box input[type=text]:focus {
   width: 200px;
-  padding: 0 10px;
+  padding: 0 0px;
   outline: none;
   color: black;
   background: none;

@@ -57,4 +57,9 @@ class MonControleur extends Controller
         $categories =Chanson::whereRaw("style=?", [$style])->get();
         return view("index", ["chansons" => $categories]);
     }
+
+    public function allCategories($style){
+        $categories =Chanson::whereRaw("style=?", [$style])->get();
+        return view("allCategories", ["chansons" => $categories]);
+    }
 }

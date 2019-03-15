@@ -20,9 +20,12 @@ nav#top-nav {
         display: flex;
         list-style-type: none;
         justify-content: flex-end;
+        margin-bottom: 0;
         li {
         flex-direction: row;
         margin: 8px;
+        margin-bottom: 0;
+        height:auto;
             svg {
                 fill:white;
             }
@@ -69,7 +72,7 @@ nav#top-nav {
     position: relative;
 }
 .search-box {	
-    padding-bottom:15px;
+    padding-bottom:0.8rem;
     input[type="text"] {
         border: none;
         background: none;
@@ -91,7 +94,7 @@ nav#top-nav {
             }
             &:focus {
                 width: 200px;
-                padding: 0 10px;
+                padding: 0 0px;
                 outline: none;
                 color: black;
                 background:none;
