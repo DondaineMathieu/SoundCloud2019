@@ -10039,3 +10039,8 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+.bouton_login {
+  width: 460px;
+
+}

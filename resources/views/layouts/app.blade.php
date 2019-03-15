@@ -14,7 +14,7 @@
 </head>
 <body>
 <nav id="top-nav">
-<div class="logo"><img src="/images/logo_jaxsong.png"</div>
+<div class="logo"><img src="/images/logo_jaxsong.png"></div>
     <ul>
         <li id="categories"> <a href="javascript:displayCategories()" > Catégories <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 14"><path d="M7 7l7 7 7-7z"/></svg> </a> </li>
         <li> <a href="" > Mes Musiques </a> </li>
