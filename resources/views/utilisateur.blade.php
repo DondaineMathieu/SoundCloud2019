@@ -23,6 +23,4 @@
 
  @include('_chansons', ['chansons' => $utilisateur->chansons])
 
-    
-
 @endsection

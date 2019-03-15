@@ -15,7 +15,16 @@ class Chanson extends Model  {
     public static function categories() {
         $pdo = DB::connection()->getPdo();
 
-        $q = $pdo->prepare("SELECT style, count(*) as cnt FROM chanson group by style order by count(*) desc");
+        $q = $pdo->prepare("SELECT style, count(*) as cnt FROM chanson group by style order by count(*) desc "); 
+        $q->execute();
+        $all =  $q->fetchAll();
+        return $all;
+    }
+    
+    public static function bestCategories() {
+        $pdo = DB::connection()->getPdo();
+
+        $q = $pdo->prepare("SELECT style, count(*) as cnt FROM chanson group by style order by count(*) desc limit 0,3 "); 
         $q->execute();
         $all =  $q->fetchAll();
         return $all;

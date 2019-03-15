@@ -13,11 +13,12 @@ function displaySearch() {
 }
 
 
-/* $(document).ready(function() {
+$(document).ready(function() {
     $(".chanson").click(function(e) {
         var f= $(this).attr('data-file');
         var audio = $("#audio");
         audio[0].src = f;
+        audio[0].load();
         audio[0].play();
     });
-}) */
+})
