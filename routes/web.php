@@ -18,6 +18,7 @@ Route::get('/utilisateur/{id}', 'MonControleur@utilisateur')->where("id","[0-9]+
 Route::get('/suivre/{id}', 'MonControleur@suivre')->where("id","[0-9]+")->middleware("auth");
 Route::get('/categories','MonControleur@allCategories');
 Route::get('/categories/{style}', 'MonControleur@categories');
+Route::get('/recherche/{s}', 'MonControleur@recherche');
 
 Auth::routes();
 

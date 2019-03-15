@@ -20,7 +20,7 @@
         <li id=> 
             <div class="container">
                 <div class="search-box">
-                    <input type="text" />
+                    <input id="input-search" type="text" onkeypress="recherche()"/>
                     <span></span>
                 </div>
             </div> 
@@ -54,7 +54,7 @@
 </nav>
 
 <audio id="audio" controls>
-        <source src="/test.m4a"" type="audio/mp3"/>
+        <source src="/test.m4a" type="audio/mp3"/>
 </audio>
 
 <br />
@@ -68,5 +68,6 @@
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/nav.js') }}"></script>
+<script src="{{ asset('js/search.js') }}"></script>
 </body>
 </html>

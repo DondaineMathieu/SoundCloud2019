@@ -62,4 +62,9 @@ class MonControleur extends Controller
         $categories = Chanson::categories();
         return view("_allCategories", ['categories'=> $categories]);
     }
+
+    public function recherche($s) {
+        $utilisateur = User::whereRaw("name LIKE CONCAT('%', ?,'%')", [$s])->get();
+        return view("recherche", ["utilisateur"=>$utilisateur]);
+    }
 }
