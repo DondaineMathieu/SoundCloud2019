@@ -9,27 +9,30 @@ function displayCategories() {
     }
 }
 
-$(document).ready(function() {
-    $(".chanson").click(function(e) {
-        var f= $(this).attr('data-file');
+$(document).ready(function () {
+    $(".chanson").click(function (e) {
+        var f = $(this).attr('data-file');
         var audio = $("#audio");
         audio[0].src = f;
         audio[0].load();
         audio[0].play();
     });
-})
 
-$("#testajax").click(function(e) {
-    e.preventDefault();
-
-    $.ajax({
-        type: "GET",
-        url: "/testajax",
-        success: function (data, textStatus, jqXHR) {
-            $("#aremplir").html(data);
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            // Error
-        }
-    })
+    toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
 })

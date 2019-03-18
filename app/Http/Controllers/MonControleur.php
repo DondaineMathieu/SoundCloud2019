@@ -50,7 +50,7 @@ class MonControleur extends Controller
             return abort(404);
         }
         $utilisateur->ilsMeSuivent()->toggle(Auth::id());
-        return back();
+        return back()->with('toastr', ['statut' =>'success', 'message' => 'Suivi modifié']);
     }
 
     public function categories($style){

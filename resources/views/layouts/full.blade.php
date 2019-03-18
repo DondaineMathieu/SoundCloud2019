@@ -65,6 +65,8 @@
     @yield('content')
 </div>
 
+
+
 <div class="footer-player">
     <div class="info-musique"> 
         <div></div>
@@ -85,6 +87,7 @@
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/jquery.pjax.js') }}"></script>
+<script src="{{ asset('js/toastr.min.js') }}"></script>
 <script src="{{ asset('js/nav.js') }}"></script>
 <script src="{{ asset('js/search.js') }}"></script>
 </body>
