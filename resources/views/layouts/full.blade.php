@@ -58,15 +58,14 @@
 </nav>
 
 <audio id="audio" controls>
-        <source src="/test.m4a" type="audio/mp3"/>
+        <source src="" type="audio/mp3"/>
 </audio>
 
-<br />
 @auth
-<a href="/nouvelle">Insérer sur une nouvelle chanson</a>
+<a href="/nouvelle" data-pjax>Insérer sur une nouvelle chanson</a>
 @endauth
 
-<div id="main-content">
+<div id="pjax-container main-content">
     @yield('content')
 </div>
 
@@ -81,7 +80,7 @@
 
     <div class="player">
         <audio id="audio" controls>
-            <source src="/test.m4a" type="audio/mp3"/>
+            <source src="" type="audio/mp3"/>
         </audio>
     </div>
 
@@ -91,6 +90,7 @@
     
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
+<script src="{{ asset('js/jquery.pjax.js') }}"></script>
 <script src="{{ asset('js/nav.js') }}"></script>
 <script src="{{ asset('js/search.js') }}"></script>
 </body>

@@ -1,4 +1,4 @@
-// document.getElementById("categories").onclick = test();
+$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
 
 function displayCategories() {
     if (document.getElementById("ul-categories").style.display == "flex") {
