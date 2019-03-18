@@ -437,6 +437,12 @@ button.toast-close-button {
   justify-content: center;
 }
 
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  #main-content {
+    flex-wrap: wrap;
+  }
+}
+
 .direction-row {
   display: flex;
   flex-direction: column;

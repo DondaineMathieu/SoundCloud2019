@@ -1,7 +1,7 @@
 <table class="table text-center">
     <thead class="thead-dark">
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">Ecoutes</th>
             <th scope="col">Musique</th>
             <th scope="col">Auteur</th>
         </tr>

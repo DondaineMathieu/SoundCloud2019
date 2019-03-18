@@ -61,10 +61,6 @@
         <source src="" type="audio/mp3"/>
 </audio>
 
-@auth
-    <a href="/nouvelle" data-pjax>Insérer sur une nouvelle chanson</a>
-@endauth
-
 <div id="main-content">
     @yield('content')
 </div>
