@@ -203,3 +203,9 @@ nav#top-nav ul li:last-child {
   height: 100%;
 }
 
+#main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
