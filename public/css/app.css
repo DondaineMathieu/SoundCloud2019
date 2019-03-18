@@ -209,3 +209,13 @@ nav#top-nav ul li:last-child {
   justify-content: center;
 }
 
+.direction-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.direction-row h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
