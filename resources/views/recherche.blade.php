@@ -4,10 +4,12 @@
 <div class="card" style="width: 25rem; min-height: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Résultats d'utilisateurs :</h5>
-          @foreach ($utilisateur as $u)
-               <a href="/utilisateur/{{$u->id}}">{{$u->name}}</a>
-           @endforeach
-       
+          
+            <ul class="list-group">
+                    @foreach ($utilisateur as $u)
+                    <li class="list-group-item"  style="border: none;"><a href="/utilisateur/{{$u->id}}">{{$u->name}}</a></li>
+                    @endforeach
+            </ul>
         </div>
 </div>
        
@@ -25,4 +27,3 @@
 </div>
 
 @endsection
-
