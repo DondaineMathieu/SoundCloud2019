@@ -11,21 +11,25 @@
     <ul class="list-group list-group-flush">
         <li class="list-group-item">You Follow : {{$utilisateur->jeLesSuit->count()}}</li>
         <li class="list-group-item">Followers : {{$utilisateur->ilsMeSuivent->count()}}</li>
+        <li class="list-group-item list-group-action">
+            @auth
+                <a href="/nouvelle">Insérer sur une nouvelle chanson</a>
+                @endauth
+        </li>
+        <li class="list-group-item">@auth
+                @if(Auth::id() != $utilisateur->id)
+                    @if($utilisateur->ilsMeSuivent->contains(Auth::id()))
+                        <a href="/suivre/{{$utilisateur->id}}"> Arreter de suivre cet utilisateur</a>
+                        
+            
+                    @else
+                        <a href="/suivre/{{$utilisateur->id}}"> Suivre cet utilisateur </a>
+                        @endif
+                @endif
+            @endauth
+            </li>
     </ul>
 </div>
-@auth
-    @if(Auth::id() != $utilisateur->id)
-        @if($utilisateur->ilsMeSuivent->contains(Auth::id()))
-            <a href="/suivre/{{$utilisateur->id}}"> Arreter de suivre </a>
-            je le suis
-
-        @else
-            <a href="/suivre/{{$utilisateur->id}}"> Suivre </a>
-            je le suis pas
-            @endif
-    @endif
-@endauth
-<br />
 
 
 

@@ -59,9 +59,6 @@
 </audio>
 
 <br />
-@auth
-<a href="/nouvelle">Insérer sur une nouvelle chanson</a>
-@endauth
 
 <div id="main-content">
     @yield('content')
