@@ -17,3 +17,18 @@ $(document).ready(function() {
         audio[0].play();
     });
 })
+
+$("#testajax").click(function(e) {
+    e.preventDefault();
+
+    $.ajax({
+        type: "GET",
+        url: "/testajax",
+        success: function (data, textStatus, jqXHR) {
+            $("#aremplir").html(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            // Error
+        }
+    })
+})

@@ -20,6 +20,8 @@ Route::get('/categories','MonControleur@allCategories');
 Route::get('/categories/{style}', 'MonControleur@categories');
 Route::get('/recherche/{s}', 'MonControleur@recherche');
 
+Route::get('/testajax','MonControleur@testajax');
+
 Auth::routes();
 
 
