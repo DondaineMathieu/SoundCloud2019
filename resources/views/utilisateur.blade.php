@@ -13,7 +13,7 @@
         <li class="list-group-item">Followers : {{$utilisateur->ilsMeSuivent->count()}}</li>
         <li class="list-group-item list-group-action">
             @auth
-                <a href="/nouvelle">Insérer sur une nouvelle chanson</a>
+                <a href="/nouvelle">Insérer une nouvelle chanson</a>
                 @endauth
         </li>
         <li class="list-group-item">@auth
