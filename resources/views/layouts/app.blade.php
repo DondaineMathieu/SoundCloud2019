@@ -14,10 +14,13 @@
 </head>
 <body>
 <nav id="top-nav">
-<div class="logo"><img src="/images/logo_jaxsong.png"></div>
+<div class="logo"><a href="/"><img src="/images/logo_jaxsong.png"></a></div>
     <ul>
         <li id="categories"> <a href="javascript:displayCategories()" > Catégories <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 14"><path d="M7 7l7 7 7-7z"/></svg> </a> </li>
-        <li> <a href="" > Mes Musiques </a> </li>
+        @guest
+        @else
+            <li> <a href="/utilisateur/{{ Auth::user()->id }}" > Mes Musiques </a> </li>
+        @endguest
         <li id=> 
             <div class="container">
                 <div class="search-box">
@@ -54,13 +57,9 @@
     </ul>
 </nav>
 
-<<<<<<< HEAD
-
-=======
 <audio id="audio" controls>
         <source src="/test.m4a" type="audio/mp3"/>
 </audio>
->>>>>>> 5b98a0fdcb58348503bdfa115071578a1176387d
 
 <br />
 @auth
