@@ -19,11 +19,11 @@
         <li class="list-group-item">@auth
                 @if(Auth::id() != $utilisateur->id)
                     @if($utilisateur->ilsMeSuivent->contains(Auth::id()))
-                        <a href="/suivre/{{$utilisateur->id}}"> Arreter de suivre cet utilisateur</a>
+                        <a href="/suivre/{{$utilisateur->id}}"  data-pjax-toggle> Arreter de suivre cet utilisateur</a>
                         
             
                     @else
-                        <a href="/suivre/{{$utilisateur->id}}"> Suivre cet utilisateur </a>
+                        <a href="/suivre/{{$utilisateur->id}}"  data-pjax-toggle> Suivre cet utilisateur </a>
                         @endif
                 @endif
             @endauth
