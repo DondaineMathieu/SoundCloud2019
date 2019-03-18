@@ -16,11 +16,11 @@
 @auth
     @if(Auth::id() != $utilisateur->id)
         @if($utilisateur->ilsMeSuivent->contains(Auth::id()))
-            <a href="/suivre/{{$utilisateur->id}}"> Arreter de suivre </a>
+            <a href="/suivre/{{$utilisateur->id}}" data-pjax-toggle> Arreter de suivre </a>
             je le suis
 
         @else
-            <a href="/suivre/{{$utilisateur->id}}"> Suivre </a>
+            <a href="/suivre/{{$utilisateur->id}}" data-pjax-toggle> Suivre </a>
             je le suis pas
             @endif
     @endif

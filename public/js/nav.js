@@ -1,4 +1,5 @@
-$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
+$(document).pjax('[data-pjax] a, a[data-pjax]', '#main-content');
+$(document).pjax('[data-pjax-toggle] a, a[data-pjax-toggle]', '#main-content', {push: false});
 
 function displayCategories() {
     if (document.getElementById("ul-categories").style.display == "flex") {
