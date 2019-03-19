@@ -10,7 +10,7 @@
     @foreach ($chansons as $c)
         <tr>
             <th scope="row">{{$c->id}}</th>
-            <td><a href="#" class="chanson" data-file="{{$c->fichier}}">{{$c->nom}}</a> </td>
+            <td><a href="#" class="chanson" data-file="{{$c->fichier}}" data-name="{{$c->nom}}" data-user="{{$c->utilisateur->name}}">{{$c->nom}}</a></td>
             <td><a href="/utilisateur/{{$c->utilisateur->id}}">{{$c->utilisateur->name}}</td>
         </tr>
     @endforeach
