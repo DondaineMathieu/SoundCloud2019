@@ -1,5 +1,7 @@
 $(document).pjax('[data-pjax] a, a[data-pjax]', '#main-content');
 $(document).pjax('[data-pjax-toggle] a, a[data-pjax-toggle]', '#main-content', {push: false});
+// $(document).on('submit', 'form[data-pjax]', function(event) { $.pjax.submit(event, '#main-content') });
+
 
 function displayCategories() {
     if (document.getElementById("ul-categories").style.display == "flex") {

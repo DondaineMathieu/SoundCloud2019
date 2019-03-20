@@ -33,7 +33,6 @@ class MonControleur extends Controller
             $c->fichier = str_replace("public", "/storage", $c->fichier);
             $c->save();
         }
-
         return redirect("/");
     }
     

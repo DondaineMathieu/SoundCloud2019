@@ -9,7 +9,7 @@
     <tbody>
     @foreach ($chansons as $c)
         <tr>
-            <th scope="row">{{$c->id}}</th>
+            <th scope="row">{{$c->nb_ecoute}}</th>
             <td><a href="#" class="chanson" data-file="{{$c->fichier}}">{{$c->nom}}</a> </td>
             <td><a href="/utilisateur/{{$c->utilisateur->id}}">{{$c->utilisateur->name}}</td>
         </tr>

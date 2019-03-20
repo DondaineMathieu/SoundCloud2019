@@ -20,8 +20,6 @@
                 @if(Auth::id() != $utilisateur->id)
                     @if($utilisateur->ilsMeSuivent->contains(Auth::id()))
                         <a href="/suivre/{{$utilisateur->id}}"  data-pjax-toggle> Arreter de suivre cet utilisateur</a>
-                        
-            
                     @else
                         <a href="/suivre/{{$utilisateur->id}}"  data-pjax-toggle> Suivre cet utilisateur </a>
                         @endif
@@ -31,8 +29,6 @@
     </ul>
 </div>
 
-
-
- @include('_chansons', ['chansons' => $utilisateur->chansons])
+@include('_chansons', ['chansons' => $utilisateur->chansons])
 
 @endsection
