@@ -57,9 +57,7 @@
     </ul>
 </nav>
 
-<audio id="audio" controls>
-        <source src="" type="audio/mp3"/>
-</audio>
+
 
 <div id="main-content">
     @yield('content')
@@ -68,20 +66,21 @@
 
 
 <div class="footer-player">
-    <div class="info-musique"> 
-        <div></div>
-        <div>
-            <h2>Titre de la chanson</h2>
-            <p>auteur de la musique</p>
-        </div>
-    </div>
-
     <div class="player">
-        <audio id="audio" controls>
+        <audio id="audio" controls >
             <source src="" type="audio/mp3"/>
         </audio>
+        <div id="customAudioPlayer">
+            <div class="button">
+                <div id="customPlay"><img src="/images/play-button.png"></div>
+                <div id="customPause"><img src="/images/pause.png"></div>
+            </div>
+            <div class="titres">
+                <h2 id="currentSongTitle" >Titre de la chanson</h2>
+                <p id="currentSongUser">Auteur</p>
+            </div>
+        </div>
     </div>
-
 </div>
 
 <!-- Scripts -->
@@ -90,5 +89,6 @@
 <script src="{{ asset('js/toastr.min.js') }}"></script>
 <script src="{{ asset('js/nav.js') }}"></script>
 <script src="{{ asset('js/search.js') }}"></script>
+<script src="{{ asset('js/audio.js') }}" defer="defer"></script>
 </body>
 </html>

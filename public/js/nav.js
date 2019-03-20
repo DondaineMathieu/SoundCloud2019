@@ -18,6 +18,11 @@ $(document).ready(function () {
         audio[0].src = f;
         audio[0].load();
         audio[0].play();
+        /** diaplay the name */
+        let title = $(this).data("name");
+        let user = $(this).data('user');
+        $('#currentSongTitle').html(title);
+        $('#currentSongUser').html(user);
     });
 
     toastr.options = {
